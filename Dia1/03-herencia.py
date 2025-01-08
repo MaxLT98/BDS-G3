@@ -1,0 +1,30 @@
+class Persona:
+        def __init__(self,dni,nom,ema):
+            self.nombre = nom
+            self.dni = dni
+            self.email = ema
+    
+        def mostrar1(self):
+            print(f" DNI : {self.dni} ")
+            print(f" NOMBRE : {self.nombre}")
+            print(f" EMAIL : {self.email}")
+
+class Alumno(Persona):
+    pass
+class Profesor(Persona):
+    def __init__(self,dni,nom,ema,esp):
+        super().__init__(dni,nom,ema)
+        self.especialidad = esp
+
+    def mostrar2(self):
+        print(f" DNI : {self.dni}")
+        print(f" NOMBRE : {self.nombre}")
+        print(f" EMAIL : {self.email}")
+        print(f" ESPECIALIDAD : {self.especialidad}")
+
+
+alumno1 = Alumno('100', 'max' , 'max@gmail.com')
+alumno1.mostrar1()
+
+profesor1 = Profesor('200','max','max1@gmail.com','programacion')
+profesor1.mostrar2()
